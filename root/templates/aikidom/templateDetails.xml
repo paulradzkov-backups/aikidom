@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>aikidom</name>
+	<creationDate>27 Apr 2012</creationDate>
+	<author>Paul Radzkov</author>
+	<authorEmail>radzkov@gmail.com</authorEmail>
+	<authorUrl>paulradzkov.com</authorUrl>
+	<copyright>Copyright (C) 2012 Paul Radzkov.</copyright>
+	<license>CC</license>
+	<version>2.5.0</version>
+	<description>TPL_BLANK_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>fonts</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>mainmenu</position>
+		<position>headercontacts</position>
+		<position>header</position>
+		<position>breadcrumbs</position>
+		<position>search</position>
+		<position>title</position>
+		<position>left</position>
+		<position>right</position>
+		<position>bottom</position>
+		<position>footer</position>
+		<position>debug</position>
+
+	</positions>
+
+	<!-- 	For core templates, we also install/uninstall the language files in the core language folders.
+	-->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_aikidom.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_aikidom.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_aikidom.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_aikidom.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+
+				<field name="sitetitle"  type="text" default=""
+					label="TPL_BLANK_FIELD_SITETITLE_LABEL"
+					description="TPL_BLANK_FIELD_SITETITLE_DESC"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="TPL_BLANK_FIELD_DESCRIPTION_LABEL"
+					description="TPL_BLANK_FIELD_DESCRIPTION_DESC"
+					filter="string" />
+
+				<field name="gacode"  type="text" default=""
+					label="TPL_BLANK_FIELD_GACODE_LABEL"
+					description="TPL_BLANK_FIELD_GACODE_DESC"
+					filter="string" />
+                    
+				<field name="yacode"  type="text" default=""
+					label="TPL_BLANK_FIELD_YACODE_LABEL"
+					description="TPL_BLANK_FIELD_YACODE_DESC"
+					filter="string" />
+                    
+                <field name="jsframework" type="list" default="moocm"
+				label="TPL_BLANK_FIELD_JSFRAMEWORK_LABEL"
+				description="TPL_BLANK_FIELD_JSFRAMEWORK_DESC" 
+				filter="word" >
+                    <option value="none">none</option>
+                    <option value="moocm">default (Mootools core + more)</option>
+                    <option value="mooc">Mootools core ONLY</option>
+                    <option value="jq">jQuery ONLY</option>
+                    <option value="moocjq">Mootools core + jQuery</option>
+                    <option value="moocmjq">Mootools core+more + jQuery</option>
+				</field>
+
+				<field name="jqversion" type="list" default="1.7.1"
+				label="TPL_BLANK_FIELD_JQVERSION_LABEL"
+				description="TPL_BLANK_FIELD_JQVERSION_DESC"
+				filter="string" >
+                    <option value="1.6.2">1.6.2</option>
+                    <option value="1.7.1">1.7.1</option>
+				</field>
+
+				<field name="pluginsjs" type="list" default="0"
+				label="TPL_BLANK_FIELD_PLUGINSJS_LABEL"
+				description="TPL_BLANK_FIELD_PLUGINSJS_DESC"
+				filter="integer" >
+                    <option value="0">TPL_BLANK_FIELD_PLUGINSJS_OPTION_NO</option>
+                    <option value="1">TPL_BLANK_FIELD_PLUGINSJS_OPTION_YES</option>
+				</field>
+                				
+                <field name="jqbottom" type="list" default="0"
+				label="TPL_BLANK_FIELD_JQBOTTOM_LABEL"
+				description="TPL_BLANK_FIELD_JQBOTTOM_DESC"
+				filter="integer" >
+                    <option value="0">TPL_BLANK_FIELD_JQBOTTOM_OPTION_TOP</option>
+                    <option value="1">TPL_BLANK_FIELD_JQBOTTOM_OPTION_BOTTOM</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
